@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bbleu0divofjr"]
+
+[ext_resource type="Script" uid="uid://cwt460sthunvk" path="res://Scenes/Nova/NovaMapScene.cs" id="1_g7raf"]
+[ext_resource type="Texture2D" uid="uid://chgnmkkqrco75" path="res://Arts/Backgrounds/NovaMap.png" id="1_xo5ks"]
+[ext_resource type="Texture2D" uid="uid://b3wede2jdpj3r" path="res://Arts/Props/MapMarker.png" id="2_s4q20"]
+[ext_resource type="Script" uid="uid://cbkm64g5h21qh" path="res://Scenes/Nova/MapLocationHotspot.cs" id="2_txerv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s4q20"]
+radius = 37.12142
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xxyln"]
+radius = 35.057095
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vtbit"]
+radius = 37.215588
+
+[sub_resource type="FontVariation" id="FontVariation_vtbit"]
+spacing_glyph = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxyln"]
+font = SubResource("FontVariation_vtbit")
+font_size = 90
+outline_size = 5
+outline_color = Color(0.6031381, 0.30574027, 0.18399787, 1)
+shadow_size = 10
+shadow_color = Color(1, 1, 1, 0.6313726)
+
+[node name="NovaMap" type="Node2D" unique_id=123881117]
+script = ExtResource("1_g7raf")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=714709806]
+position = Vector2(627, 629)
+texture = ExtResource("1_xo5ks")
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=328271698]
+
+[node name="PowerOffline" type="Area2D" parent="Hotspots" unique_id=1249408796]
+script = ExtResource("2_txerv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hotspots/PowerOffline" unique_id=141324828]
+position = Vector2(541, 522)
+scale = Vector2(0.11, 0.16)
+texture = ExtResource("2_s4q20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/PowerOffline" unique_id=364364340]
+position = Vector2(540, 522)
+shape = SubResource("CircleShape2D_s4q20")
+
+[node name="Label" type="Label" parent="Hotspots/PowerOffline" unique_id=812396675]
+offset_left = 560.0
+offset_top = 511.0
+offset_right = 724.0
+offset_bottom = 534.0
+text = "Outpost 17"
+
+[node name="CrashSite" type="Area2D" parent="Hotspots" unique_id=665175528]
+script = ExtResource("2_txerv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hotspots/CrashSite" unique_id=966229996]
+position = Vector2(459, 587)
+scale = Vector2(0.11, 0.16)
+texture = ExtResource("2_s4q20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/CrashSite" unique_id=664904975]
+position = Vector2(460, 586)
+shape = SubResource("CircleShape2D_xxyln")
+
+[node name="Label" type="Label" parent="Hotspots/CrashSite" unique_id=1601774361]
+offset_left = 473.0
+offset_top = 578.0
+offset_right = 550.0
+offset_bottom = 601.0
+text = "Crash site"
+
+[node name="Kraker" type="Area2D" parent="Hotspots" unique_id=1355244898]
+script = ExtResource("2_txerv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hotspots/Kraker" unique_id=57145736]
+position = Vector2(797, 267)
+scale = Vector2(0.11, 0.16)
+texture = ExtResource("2_s4q20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Kraker" unique_id=716791530]
+position = Vector2(798, 268)
+shape = SubResource("CircleShape2D_vtbit")
+
+[node name="Label" type="Label" parent="Hotspots/Kraker" unique_id=29667226]
+offset_left = 827.0
+offset_top = 249.0
+offset_right = 879.0
+offset_bottom = 272.0
+text = "Kraker"
+
+[node name="Name" type="Label" parent="." unique_id=2105420205]
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 527.0
+offset_bottom = 169.0
+text = "Nova"
+label_settings = SubResource("LabelSettings_xxyln")

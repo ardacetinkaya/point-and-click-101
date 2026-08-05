@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://k2lej2r41ke4"]
+
+[ext_resource type="Script" uid="uid://dguv1jhkwqabr" path="res://Scenes/StationInterior/StationInteriorScene.cs" id="1_r7ewt"]
+[ext_resource type="Texture2D" uid="uid://blvh2gkwt6e2y" path="res://Arts/Backgrounds/StationInterior.png" id="2_r7ewt"]
+[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player.tscn" id="3_34vv0"]
+[ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="4_r7vhr"]
+[ext_resource type="PackedScene" uid="uid://cvoq8h4wot78f" path="res://Scenes/Shared/InventoryPanel.tscn" id="5_g4c8b"]
+[ext_resource type="Script" uid="uid://iaikg5nnhs3c" path="res://Scenes/StationInterior/Props/Map/Map.cs" id="6_bnfey"]
+[ext_resource type="Texture2D" uid="uid://bm4uelvsltsaf" path="res://Arts/Props/Map.png" id="7_2j4qa"]
+[ext_resource type="Script" uid="uid://b5tmsgib2r78g" path="res://Scenes/Shared/DirectExit.cs" id="8_apmpq"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_loln6"]
+vertices = PackedVector2Array(366.6797, 329.97656, 366.67188, 329.96875, 474.1328, 324.04688, 495.20313, 328.85156, 949.8203, 373.9922, 1058.4219, 389.03906, 1071.6172, 429.6328, 338.42188, 348.10156, 326.4375, 332.70313, 656.7969, 351.21094, 39.773438, 418.03125, 28.070313, 402.42188, 247.89844, 369.82813, 700.03906, 338.1172, 956.47656, 360.67188, 48.648438, 439.82813, 89.046875, 438.89844, 102.50781, 452.3672, 146.71875, 468.71094, 315.0703, 541.46094, 1127.3828, 432.5078, 1135.5781, 632.96875, 314.10156, 631.02344)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 0, 9), PackedInt32Array(10, 11, 12), PackedInt32Array(13, 14, 4, 9), PackedInt32Array(15, 10, 12, 16), PackedInt32Array(17, 16, 12, 18), PackedInt32Array(19, 18, 12, 7, 6), PackedInt32Array(6, 20, 21, 22, 19), PackedInt32Array(3, 9, 0)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(366, 320, 307, 324, 321, 342, 246, 360, 10, 395, 31, 423, 42, 450, 85, 449, 97, 461, 143, 478, 305, 548, 304, 641, 1146, 643, 1137, 423, 1079, 420, 1066, 380, 965, 366, 972, 352, 699, 328, 656, 341, 497, 319, 475, 314)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up6l7"]
+size = Vector2(78.64789, 70.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjhib"]
+size = Vector2(55.5, 134)
+
+[node name="StationInterior" type="Node2D" unique_id=2137259931]
+script = ExtResource("1_r7ewt")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1915473441]
+position = Vector2(576.5, 322.5)
+scale = Vector2(0.7473958, 0.6298828)
+texture = ExtResource("2_r7ewt")
+
+[node name="WalkableArea" type="NavigationRegion2D" parent="." unique_id=816921368]
+navigation_polygon = SubResource("NavigationPolygon_loln6")
+
+[node name="Player" parent="." unique_id=2083515506 instance=ExtResource("3_34vv0")]
+z_index = 2
+position = Vector2(437, 343)
+FarY = 340.0
+NearY = 615.0
+FarScale = 1.0
+NearScale = 2.0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1842925377]
+
+[node name="ActionMenu" parent="UI" unique_id=1049884715 instance=ExtResource("4_r7vhr")]
+offset_left = -373.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 245.0
+
+[node name="InventoryPanel" parent="UI" unique_id=756820625 instance=ExtResource("5_g4c8b")]
+visible = false
+anchors_preset = 15
+
+[node name="Props" type="Node2D" parent="." unique_id=915635129]
+
+[node name="Map" type="Area2D" parent="Props" unique_id=130283299]
+script = ExtResource("6_bnfey")
+
+[node name="Sprite2D" type="Sprite2D" parent="Props/Map" unique_id=916083941]
+z_index = 1
+position = Vector2(868.62506, 195.375)
+scale = Vector2(0.070773534, 0.075956956)
+texture = ExtResource("7_2j4qa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Map" unique_id=1325414229]
+position = Vector2(868.67285, 191.18279)
+rotation = 0.24085544
+shape = SubResource("RectangleShape2D_up6l7")
+
+[node name="Marker2D" type="Marker2D" parent="Props/Map" unique_id=823463402]
+position = Vector2(836, 354)
+
+[node name="Exit" type="Node2D" parent="." unique_id=294917612]
+
+[node name="PowerOffline" type="Area2D" parent="Exit" unique_id=1072013376]
+script = ExtResource("8_apmpq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/PowerOffline" unique_id=1608729868]
+position = Vector2(410.25, 221)
+shape = SubResource("RectangleShape2D_hjhib")
+
+[node name="Marker2D" type="Marker2D" parent="Exit/PowerOffline" unique_id=519015535]
+position = Vector2(412, 284)

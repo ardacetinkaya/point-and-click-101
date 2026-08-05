@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://bnd4vxwkyi57p"]
+
+[ext_resource type="Script" uid="uid://dr0tr6hsk8g8f" path="res://Scenes/PowerOffline/PowerOfflineScene.cs" id="1_jd67s"]
+[ext_resource type="Texture2D" uid="uid://bhwq8t5i3c56h" path="res://Arts/Backgrounds/PowerOffline.png" id="2_n31hy"]
+[ext_resource type="Texture2D" uid="uid://ccqnhs8e3vxb6" path="res://Arts/Backgrounds/PowerOffline-Light.png" id="3_4ttii"]
+[ext_resource type="Script" uid="uid://bm4j3i80pkooj" path="res://Scenes/PowerOffline/Hotspots/Sign/SignHotspot.cs" id="4_0ofq7"]
+[ext_resource type="Script" uid="uid://cqlega1tsuw6e" path="res://Scenes/PowerOffline/Hotspots/Cable/CableHotspot.cs" id="5_bwk6v"]
+[ext_resource type="Script" uid="uid://dmb7jpwlyd5vx" path="res://Scenes/PowerOffline/Hotspots/Entrance/EntranceHotspot.cs" id="6_xue8y"]
+[ext_resource type="Script" uid="uid://dsxfr7wk5pq2u" path="res://Scenes/PowerOffline/Hotspots/Exit/ExitHotspot.cs" id="7_wk0gl"]
+[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player.tscn" id="8_chfm4"]
+[ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="9_sxmlv"]
+[ext_resource type="PackedScene" uid="uid://cvoq8h4wot78f" path="res://Scenes/Shared/InventoryPanel.tscn" id="10_8oeuy"]
+[ext_resource type="Script" uid="uid://c3frmidbrxxrs" path="res://Scenes/Shared/SceneTransitionArea.cs" id="11_nsyhj"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_231je"]
+vertices = PackedVector2Array(425, 523, 561.0547, 503.77344, 595, 498.97656, 609, 497, 602, 533, 551, 570, 512, 584, 445, 391, 379, 363, 472, 365, 1055, 348, 1005, 314, 1067, 325, 1086, 336, 208, 756, 58, 750, 245, 660, 495, 753, 166, 379, 147, 364, 179, 368, 466, 409, 924, 471, 1025.875, 581.8672, 1020.625, 581.53906, 932, 574, 797, 541, 804, 475, 846, 452, 112, 609, 75, 619, 90, 578, 156, 579, 129, 614, 1123, 355, 1088, 377, 1036, 603, 1152, 595, 1146, 611, 1101, 619, 1018, 627, 957, 424, 943, 409, 1021, 376, 1033, 421, 79, 488, 6, 500, 6, 467, 133, 466, 168, 545, 137, 528, 203, 445, 306, 499, 889, 427, 981, 457, 170, 648, 229, 623, 760, 461, 702, 465, 726, 454, 668, 416, 701, 415, 610, 460, 614, 427, 185, 410, 231, 405, 241, 419, 535, 442, 561, 409, 609, 496, 383, 423, 354, 405, 316, 459, 519, 604, 565, 628, 708, 753, 654, 633, 719, 641, 754, 755, 792, 642, 825, 754, 945, 713, 904, 738, 867, 756, 814, 591, 845, 577, 899, 574, 958, 688, 991, 668, 1028, 582)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6), PackedInt32Array(7, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(18, 19, 20), PackedInt32Array(7, 9, 21), PackedInt32Array(22, 23, 24, 25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(33, 29, 32), PackedInt32Array(13, 34, 35, 10), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(45, 46, 47, 48), PackedInt32Array(49, 50, 45, 48, 51, 52), PackedInt32Array(10, 35, 44, 43), PackedInt32Array(53, 41, 44, 54, 22, 28), PackedInt32Array(55, 33, 32, 56), PackedInt32Array(57, 28, 27), PackedInt32Array(57, 27, 58, 59), PackedInt32Array(60, 61, 59, 58, 62, 63), PackedInt32Array(64, 18, 20, 65), PackedInt32Array(51, 64, 65, 66), PackedInt32Array(56, 32, 49, 52, 0), PackedInt32Array(67, 68, 63, 62, 2, 1), PackedInt32Array(62, 69, 2), PackedInt32Array(21, 68, 67, 70), PackedInt32Array(7, 21, 70, 71), PackedInt32Array(71, 70, 72, 66), PackedInt32Array(66, 72, 52, 51), PackedInt32Array(17, 16, 56, 0, 6, 73), PackedInt32Array(17, 73, 74, 75), PackedInt32Array(75, 74, 76, 77, 78), PackedInt32Array(78, 77, 79, 80), PackedInt32Array(81, 82, 83, 80, 79, 84, 85, 86, 87), PackedInt32Array(88, 87, 86, 24, 40), PackedInt32Array(36, 40, 24, 23), PackedInt32Array(36, 23, 89)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(899, 574, 845, 577, 814, 591, 792, 642, 719, 641, 654, 633, 565, 628, 519, 604, 512, 584, 551, 570, 602, 533, 609, 497, 425, 523, 306, 499, 316, 459, 383, 423, 535, 442, 562, 506, 609, 496, 610, 460, 702, 465, 804, 475, 797, 541, 932, 574, 1026, 582, 924, 471, 981, 457, 1033, 421, 1088, 377, 1123, 355, 1086, 336, 1067, 325, 1005, 314, 1055, 348, 1021, 376, 943, 409, 957, 424, 889, 427, 846, 452, 760, 461, 726, 454, 701, 415, 668, 416, 614, 427, 561, 409, 466, 409, 472, 365, 379, 363, 445, 391, 354, 405, 241, 419, 231, 405, 179, 368, 147, 364, 166, 379, 185, 410, 203, 445, 133, 466, 6, 467, 6, 500, 79, 488, 137, 528, 168, 545, 156, 579, 90, 578, 75, 619, 112, 609, 129, 614, 170, 648, 229, 623, 245, 660, 58, 750, 208, 756, 495, 753, 708, 753, 754, 755, 825, 754, 867, 756, 904, 738, 945, 713, 958, 688, 991, 668, 1018, 627, 1101, 619, 1146, 611, 1152, 595, 1036, 603, 1028, 582)])
+agent_radius = 0.0
+
+[sub_resource type="Gradient" id="Gradient_1p0nb"]
+offsets = PackedFloat32Array(0.27272728, 1)
+colors = PackedColorArray(0.14370608, 0.37859076, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xxyln"]
+gradient = SubResource("Gradient_1p0nb")
+fill_from = Vector2(0.44871795, 0.51282054)
+fill_to = Vector2(0.6111111, 0.22649573)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_i8aty"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_i8aty"]
+offsets = PackedFloat32Array(0.25056434, 0.59142214)
+colors = PackedColorArray(0.7029388, 0.76949966, 1, 1, 0, 0, 1, 0.4862745)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i8aty"]
+gradient = SubResource("Gradient_i8aty")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i8aty"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 3.61
+direction = Vector3(3, 0, 0)
+spread = 120.0
+initial_velocity_min = 25.0
+initial_velocity_max = 50.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, 35, 0)
+scale_max = 3.0
+color = Color(0.18400002, 0.7897335, 0.8, 0.92156863)
+color_ramp = SubResource("GradientTexture1D_i8aty")
+hue_variation_min = 0.029999977
+hue_variation_max = 0.029999977
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mds1c"]
+particle_flag_disable_z = true
+spread = 48.782
+initial_velocity_min = 42.94
+initial_velocity_max = 98.049995
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxyln"]
+size = Vector2(35, 63.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf8e7"]
+size = Vector2(58, 26)
+
+[node name="PowerOffline" type="Node2D" unique_id=1000411276]
+script = ExtResource("1_jd67s")
+
+[node name="Background-LightsOff" type="Sprite2D" parent="." unique_id=1217441830]
+position = Vector2(576.5, 322.5)
+scale = Vector2(0.7493489, 0.6298828)
+texture = ExtResource("2_n31hy")
+
+[node name="Background-LightsOn" type="Sprite2D" parent="." unique_id=156849304]
+position = Vector2(576.5, 322.5)
+scale = Vector2(0.74934894, 0.6298829)
+texture = ExtResource("3_4ttii")
+
+[node name="WalkableArea" type="NavigationRegion2D" parent="." unique_id=530995441]
+position = Vector2(0, -111)
+navigation_polygon = SubResource("NavigationPolygon_231je")
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1442694246]
+
+[node name="Sign" type="Area2D" parent="Hotspots" unique_id=1384029554]
+script = ExtResource("4_0ofq7")
+CanTouch = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hotspots/Sign" unique_id=1682704949]
+position = Vector2(-76.74896, -30)
+scale = Vector2(0.9888805, 1)
+polygon = PackedVector2Array(701, 396, 862, 408, 864, 482, 702, 466)
+
+[node name="Marker2D" type="Marker2D" parent="Hotspots/Sign" unique_id=1507105979]
+position = Vector2(676, 520)
+
+[node name="Cable" type="Area2D" parent="Hotspots" unique_id=539333757]
+script = ExtResource("5_bwk6v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hotspots/Cable" unique_id=247523475]
+position = Vector2(71, 4)
+polygon = PackedVector2Array(722, 555, 750, 548, 772, 566, 758, 584, 760, 584, 710, 579, 729, 568)
+
+[node name="Marker2D" type="Marker2D" parent="Hotspots/Cable" unique_id=284427137]
+position = Vector2(804, 557)
+
+[node name="ElectricalEffect" type="Node2D" parent="Hotspots/Cable" unique_id=395548636]
+
+[node name="LeftEnd" type="Node2D" parent="Hotspots/Cable/ElectricalEffect" unique_id=503569595]
+position = Vector2(42, -15)
+
+[node name="Glow" type="PointLight2D" parent="Hotspots/Cable/ElectricalEffect/LeftEnd" unique_id=859712490]
+position = Vector2(775.7711, 588.0241)
+rotation = 0.24783675
+scale = Vector2(2.2981317, 1.3945019)
+skew = 0.29670596
+color = Color(0.49411765, 0.8627451, 1, 1)
+energy = 0.92
+texture = SubResource("GradientTexture2D_xxyln")
+texture_scale = 0.23
+
+[node name="Sparks" type="GPUParticles2D" parent="Hotspots/Cable/ElectricalEffect/LeftEnd" unique_id=1172955148]
+z_index = 15
+material = SubResource("CanvasItemMaterial_i8aty")
+position = Vector2(775, 595)
+amount = 11
+lifetime = 0.31
+explosiveness = 0.8
+randomness = 0.61
+collision_base_size = 3.52
+process_material = SubResource("ParticleProcessMaterial_i8aty")
+
+[node name="Sparks2" type="GPUParticles2D" parent="Hotspots/Cable/ElectricalEffect/LeftEnd" unique_id=383954336]
+position = Vector2(762, 595)
+rotation = 1.3351768
+amount = 11
+lifetime = 0.25
+explosiveness = 0.8
+randomness = 0.7
+process_material = SubResource("ParticleProcessMaterial_mds1c")
+
+[node name="Entrance" type="Area2D" parent="Hotspots" unique_id=1504067367]
+script = ExtResource("6_xue8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspots/Entrance" unique_id=1983938187]
+position = Vector2(703.5, 251.25)
+shape = SubResource("RectangleShape2D_xxyln")
+
+[node name="Marker2D" type="Marker2D" parent="Hotspots/Entrance" unique_id=987592717]
+position = Vector2(678, 302)
+
+[node name="Exit" type="Area2D" parent="Hotspots" unique_id=784064447]
+script = ExtResource("7_wk0gl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hotspots/Exit" unique_id=1451463422]
+position = Vector2(132, 168)
+polygon = PackedVector2Array(52, -5, 78, 24, 72, 74, 49, 87, -2, 87, -25, 68, -16, 12, 12, -20)
+
+[node name="Marker2D" type="Marker2D" parent="Hotspots/Exit" unique_id=1907463023]
+position = Vector2(168, 262)
+
+[node name="Player" parent="." unique_id=2083515506 instance=ExtResource("8_chfm4")]
+position = Vector2(1071, 265)
+FarY = 232.0
+NearY = 624.0
+FarScale = 0.4
+NearScale = 1.4
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=664886651]
+
+[node name="ActionMenu" parent="UI" unique_id=1049884715 instance=ExtResource("9_sxmlv")]
+offset_left = -404.0
+offset_top = 34.0
+offset_right = -47.0
+offset_bottom = 263.0
+
+[node name="InventoryPanel" parent="UI" unique_id=756820625 instance=ExtResource("10_8oeuy")]
+visible = false
+anchors_preset = 15
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=314016872]
+position = Vector2(454, -114)
+
+[node name="FromStationInterior" type="Marker2D" parent="SpawnPoints" unique_id=1707781772]
+position = Vector2(214, 423)
+
+[node name="FromCrashSite" type="Marker2D" parent="SpawnPoints" unique_id=594152661]
+position = Vector2(624, 356)
+
+[node name="FromNovaMap" type="Marker2D" parent="SpawnPoints" unique_id=968521360]
+position = Vector2(-291, 379)
+
+[node name="Transitions" type="Node2D" parent="." unique_id=1321940007]
+
+[node name="ToCrashSite" type="Area2D" parent="Transitions" unique_id=1749156555]
+script = ExtResource("11_nsyhj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ToCrashSite" unique_id=743612015]
+position = Vector2(1042, 214)
+shape = SubResource("RectangleShape2D_sf8e7")

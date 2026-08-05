@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cew104ut6wbd3"]
+
+[ext_resource type="Texture2D" uid="uid://uap1oatp8ck5" path="res://Arts/Backgrounds/Kraker.png" id="1_2yidq"]
+[ext_resource type="Script" uid="uid://y0eqceh85s0s" path="res://Scenes/Kraker/KrakerScene.cs" id="1_smtjw"]
+[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player.tscn" id="3_yipui"]
+[ext_resource type="PackedScene" uid="uid://cvoq8h4wot78f" path="res://Scenes/Shared/InventoryPanel.tscn" id="4_3y0ex"]
+[ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="5_tdbi4"]
+[ext_resource type="Script" uid="uid://c3frmidbrxxrs" path="res://Scenes/Shared/SceneTransitionArea.cs" id="6_3y0ex"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_yipui"]
+vertices = PackedVector2Array(121.34375, 273.07813, 53.0625, 242.86719, 1145.75, 240.02344, 787.64844, 267.9297, 889.85156, 672.84375, 184.15625, 652.1406, 305.1875, 590.0078, 753.40625, 438, 956.78906, 438, 304.79688, 577.3672, 152.74219, 510.89844, 240.57031, 471.6797, 550.47656, 371.7422, 56.820313, 373.96875, 11.6875, 378.0703, 10.28125, 328.60156, 111.296875, 324.6875, 114.65625, 377.1875, 1143, 353.8828, 1097.7188, 352.90625, 977.03125, 285.2422, 1143, 391.8203, 1134.0625, 393.64844, 1086.5313, 415.04688, 1018.47656, 428.1875, 1055.1016, 432.39063, 241.39063, 459.6875, 541.4297, 331.0078, 138.67969, 395.7578, 631.21875, 293.3203)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(17, 13, 16), PackedInt32Array(2, 18, 19, 20), PackedInt32Array(19, 18, 21, 22), PackedInt32Array(19, 22, 23, 24), PackedInt32Array(24, 23, 25), PackedInt32Array(24, 25, 4, 8), PackedInt32Array(12, 7, 6, 9), PackedInt32Array(12, 11, 26, 27), PackedInt32Array(27, 26, 28, 17, 16, 0), PackedInt32Array(29, 27, 0), PackedInt32Array(2, 20, 3), PackedInt32Array(0, 3, 29)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(6, 233, 1156, 230, 1153, 354, 1153, 400, 1001, 431, 1081, 355, 974, 295, 788, 278, 634, 303, 553, 337, 559, 364, 755, 428, 956, 428, 1151, 397, 1091, 424, 1062, 440, 895, 683, 145, 661, 295, 584, 128, 511, 231, 465, 133, 404, 111, 387, 57, 384, 2, 389, 0, 319, 103, 315, 110, 279)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxyln"]
+size = Vector2(48, 164.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtbit"]
+size = Vector2(48, 68)
+
+[node name="KrakerScene" type="Node2D" unique_id=1717991386]
+script = ExtResource("1_smtjw")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1289129064]
+position = Vector2(576.75, 326)
+scale = Vector2(0.7521173, 0.6269531)
+texture = ExtResource("1_2yidq")
+
+[node name="WalkableArea" type="NavigationRegion2D" parent="." unique_id=799877683]
+navigation_polygon = SubResource("NavigationPolygon_yipui")
+
+[node name="Player" parent="." unique_id=2083515506 instance=ExtResource("3_yipui")]
+position = Vector2(257, 632)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=392333495]
+visible = false
+
+[node name="FromNovaMap" type="Marker2D" parent="SpawnPoints" unique_id=457815986]
+position = Vector2(70, 367)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1202110844]
+visible = false
+
+[node name="InventoryPanel" parent="UI" unique_id=756820625 instance=ExtResource("4_3y0ex")]
+anchors_preset = 15
+
+[node name="ActionMenu" parent="UI" unique_id=1049884715 instance=ExtResource("5_tdbi4")]
+
+[node name="Transitions" type="Node2D" parent="." unique_id=165916679]
+
+[node name="ToMap" type="Area2D" parent="Transitions" unique_id=964544614]
+script = ExtResource("6_3y0ex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/ToMap" unique_id=141913486]
+position = Vector2(1141, 322)
+shape = SubResource("RectangleShape2D_xxyln")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Transitions/ToMap" unique_id=1362915660]
+position = Vector2(16, 353)
+shape = SubResource("RectangleShape2D_vtbit")

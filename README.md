@@ -69,16 +69,25 @@ This is not intended to be a complete or production-ready game. Its main purpose
 
 ## Current Game Flow
 
-The prototype begins at a spacecraft crash site. The player can move between several outdoor and indoor locations, interact with objects, repair a damaged power connection, enter the station, collect a map, open the inventory, and use the map to travel to other locations.
+The prototype begins at a spacecraft crash site. The player can move between several outdoor and indoor locations, interact with objects. The Player is the character in the game. He should find a away to go other places in "Nova Map"
 
 The project currently includes these main scenes:
 
-- Crash Site
- - [Screen#1.png](Assets/Screen%231.png)
-- Power Offline
-- Station Interior
-- Nova Map
-- Kraker
+- __Crash Site__
+   
+   ![Crash Site](Assets/Screen%231.png)
+- __Power Offline__
+
+   ![Crash Site](Assets/Screen%232.png)
+- __Station Interior__
+
+   ![Crash Site](Assets/Screen%233.png)
+- __Nova Map__
+
+   ![Crash Site](Assets/Screen%234.png)
+- __Kraker__
+
+   ![Crash Site](Assets/Screen%235.png)
 
 ## Controls
 

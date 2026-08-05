@@ -38,6 +38,10 @@ This is not intended to be a complete or production-ready game. Its main purpose
 
 - **Action menu** — Clicking a hotspot opens an icon-based action menu containing options such as Look, Touch, Use, Move, and Talk.
 
+- **Global game menu** — An autoloaded menu can be opened with "esc" key from any scene. It pauses the current game and provides Resume, New Game, Save Game, and Load Game actions.
+
+- **Save slots and game loading** — Three save slots store the current scene, player position, story state, station power, and inventory. 
+
 - **Dynamic action availability** — Available actions can change according to previous interactions or game state. 
   - For example, an object can require the Look action before Touch becomes available.
 

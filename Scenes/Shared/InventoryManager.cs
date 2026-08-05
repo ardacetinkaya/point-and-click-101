@@ -1,5 +1,6 @@
 using Godot;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class InventoryManager : Node
 {
@@ -45,5 +46,12 @@ public partial class InventoryManager : Node
     public bool HasItem(string itemId)
     {
         return _items.Contains(itemId);
+    }
+
+    public void RestoreItems(IEnumerable<string> itemIds)
+    {
+        _items.Clear();
+        _items.AddRange(itemIds.Where(itemId => !string.IsNullOrWhiteSpace(itemId)).Distinct());
+        EmitSignal(SignalName.InventoryChanged);
     }
 }

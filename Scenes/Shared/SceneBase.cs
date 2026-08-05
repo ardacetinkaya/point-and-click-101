@@ -26,7 +26,7 @@ public abstract partial class SceneBase : Node2D
 		ActionMenu?.ActionChosen += OnActionChosen;
 
 		OnRoomReady();
-		PlacePlayerAtSpawnPoint();
+		PlacePlayer();
 	}
 
 	protected virtual void OnRoomReady()
@@ -118,8 +118,15 @@ public abstract partial class SceneBase : Node2D
 		Player.MoveTo(hotspot.InteractionPoint.GlobalPosition);
 	}
 	
-	private void PlacePlayerAtSpawnPoint()
+	private void PlacePlayer()
 	{
+		if (GameState.Instance.TryTakeLoadedPlayerPosition(out Vector2 loadedPosition))
+		{
+			Player.GlobalPosition = loadedPosition;
+			Player.Stop();
+			return;
+		}
+
 		string spawnPointName = GameState.Instance.NextSpawnPoint;
 
 		if (string.IsNullOrWhiteSpace(spawnPointName))

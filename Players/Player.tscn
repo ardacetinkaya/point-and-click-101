@@ -169,17 +169,26 @@ shape = SubResource("CapsuleShape2D_xxyln")
 path_desired_distance = 5.0
 target_desired_distance = 4.0
 
-[node name="ThoughtBubble" type="PanelContainer" parent="." unique_id=922570036]
+[node name="ThoughtBubble" type="Panel" parent="." unique_id=1083963367]
 z_index = 100
-offset_left = -182.0
-offset_top = -248.0
-offset_right = 151.0
-offset_bottom = -208.0
+offset_left = -180.0
+offset_top = -230.0
+offset_right = 180.0
+offset_bottom = -110.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ru3s8")
 
 [node name="ThoughtLabel" type="Label" parent="ThoughtBubble" unique_id=2012013431]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = -12.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

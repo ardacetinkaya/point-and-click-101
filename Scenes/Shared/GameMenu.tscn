@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://x7lrfgyovd7w"]
+
+[ext_resource type="Script" uid="uid://4o2n8m3vxwit" path="res://Scenes/Shared/GameMenu.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://7fn6tux6wk8n" path="res://Arts/Shared/ActionMenu.png" id="2_background"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_menu"]
+texture = ExtResource("2_background")
+
+[node name="GameMenu" type="CanvasLayer" unique_id=489813881]
+layer = 100
+script = ExtResource("1_script")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1388040764]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.55)
+
+[node name="CenterContainer" type="CenterContainer" parent="Overlay" unique_id=1634303444]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPanel" type="PanelContainer" parent="Overlay/CenterContainer" unique_id=1528139148]
+custom_minimum_size = Vector2(357, 300)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_menu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/MenuPanel" unique_id=1410259137]
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="MenuItems" type="VBoxContainer" parent="Overlay/CenterContainer/MenuPanel/MarginContainer" unique_id=876614111]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Title" type="Label" parent="Overlay/CenterContainer/MenuPanel/MarginContainer/MenuItems" unique_id=1400852899]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "NOVA"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Overlay/CenterContainer/MenuPanel/MarginContainer/MenuItems" unique_id=586408370]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Resume"
+flat = true
+
+[node name="NewGameButton" type="Button" parent="Overlay/CenterContainer/MenuPanel/MarginContainer/MenuItems" unique_id=1180469719]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "New Game"
+flat = true
+
+[node name="SaveButton" type="Button" parent="Overlay/CenterContainer/MenuPanel/MarginContainer/MenuItems" unique_id=641073022]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Save Game"
+flat = true
+
+[node name="LoadButton" type="Button" parent="Overlay/CenterContainer/MenuPanel/MarginContainer/MenuItems" unique_id=289014126]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Load Game"
+flat = true
+
+[node name="StatusLabel" type="Label" parent="Overlay/CenterContainer/MenuPanel/MarginContainer/MenuItems" unique_id=1376710326]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="SlotCenterContainer" type="CenterContainer" parent="Overlay" unique_id=1004600348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotPanel" type="PanelContainer" parent="Overlay/SlotCenterContainer" unique_id=460998395]
+custom_minimum_size = Vector2(357, 360)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_menu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/SlotCenterContainer/SlotPanel" unique_id=2059720492]
+layout_mode = 2
+theme_override_constants/margin_left = 38
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 38
+theme_override_constants/margin_bottom = 42
+
+[node name="SlotItems" type="VBoxContainer" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer" unique_id=1639365710]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Title" type="Label" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer/SlotItems" unique_id=1789502021]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SAVE GAME"
+horizontal_alignment = 1
+
+[node name="Slot1Button" type="Button" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer/SlotItems" unique_id=994606033]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Slot#1-Empty"
+flat = true
+
+[node name="Slot2Button" type="Button" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer/SlotItems" unique_id=1345945569]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Slot#2-Empty"
+flat = true
+
+[node name="Slot3Button" type="Button" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer/SlotItems" unique_id=1210671216]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Slot#3-Empty"
+flat = true
+
+[node name="StatusLabel" type="Label" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer/SlotItems" unique_id=1674276481]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="Overlay/SlotCenterContainer/SlotPanel/MarginContainer/SlotItems" unique_id=183891726]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Back"
+flat = true
+
+[node name="OverwriteConfirmation" type="ColorRect" parent="Overlay" unique_id=1265963165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="CenterContainer" type="CenterContainer" parent="Overlay/OverwriteConfirmation" unique_id=536970228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConfirmationPanel" type="PanelContainer" parent="Overlay/OverwriteConfirmation/CenterContainer" unique_id=526290505]
+custom_minimum_size = Vector2(420, 220)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_menu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/OverwriteConfirmation/CenterContainer/ConfirmationPanel" unique_id=1762180042]
+layout_mode = 2
+theme_override_constants/margin_left = 42
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 42
+theme_override_constants/margin_bottom = 42
+
+[node name="ConfirmationItems" type="VBoxContainer" parent="Overlay/OverwriteConfirmation/CenterContainer/ConfirmationPanel/MarginContainer" unique_id=942558563]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Question" type="Label" parent="Overlay/OverwriteConfirmation/CenterContainer/ConfirmationPanel/MarginContainer/ConfirmationItems" unique_id=1043231453]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Are you sure you want to overwrite this slot?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Choices" type="HBoxContainer" parent="Overlay/OverwriteConfirmation/CenterContainer/ConfirmationPanel/MarginContainer/ConfirmationItems" unique_id=877675046]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="YesButton" type="Button" parent="Overlay/OverwriteConfirmation/CenterContainer/ConfirmationPanel/MarginContainer/ConfirmationItems/Choices" unique_id=1783913456]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Yes"
+flat = true
+
+[node name="NoButton" type="Button" parent="Overlay/OverwriteConfirmation/CenterContainer/ConfirmationPanel/MarginContainer/ConfirmationItems/Choices" unique_id=1466424591]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "No"
+flat = true

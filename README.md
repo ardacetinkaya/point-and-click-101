@@ -18,6 +18,10 @@ This is not intended to be a complete or production-ready game. Its main purpose
   - The project folder is shared after 2 scene is done.
 
 
+
+![Nova](Assets/Nova.gif)
+
+
 ## What the Project Covers
 
 - **Godot scenes and nodes** — Scenes are used to organize locations, the player, UI elements, hotspots, visual objects, and reusable game components.

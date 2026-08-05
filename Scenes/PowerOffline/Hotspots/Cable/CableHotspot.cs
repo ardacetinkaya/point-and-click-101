@@ -32,8 +32,8 @@ public partial class CableHotspot : Hotspot
 	{
 		return action switch
 		{
-			HotspotAction.Look => LookText,
-			HotspotAction.Touch => TouchText,
+			HotspotAction.Look => GameState.Instance.StationHasPower ? "Like a new" : LookText,
+			HotspotAction.Touch => GameState.Instance.StationHasPower ? "I don't want to touch" : TouchText,
 			HotspotAction.Use => ConnectCable(),
 			_ => "There is nothing that I can do now"
 		};
@@ -67,9 +67,6 @@ public partial class CableHotspot : Hotspot
 		_electricalEffect.Hide();
 
 		EmitSignal(SignalName.CableConnected);
-
-		LookText = "Like a new";
-		TouchText = "I don't want to touch";
 		
 		return "Let the party start..";
 	}

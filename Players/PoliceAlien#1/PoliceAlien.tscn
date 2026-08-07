@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bciqw5xs8auww"]
+
+[ext_resource type="Script" uid="uid://d04mr6huwfky0" path="res://Players/PoliceAlien#1/PoliceAlien.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dpjhmdhryf8rm" path="res://Arts/Players/PoliceAlien#1/PoliceAlien#1_WriteTicket.png" id="2_write"]
+[ext_resource type="Texture2D" uid="uid://cebnp2kcou4vh" path="res://Arts/Players/PoliceAlien#1/PoliceAlien#1_PlaceTicket.png" id="3_place"]
+[ext_resource type="Texture2D" uid="uid://cg1t5r2symuxo" path="res://Arts/Players/PoliceAlien#1/PoliceAlien#1_Walk.png" id="4_walk"]
+
+[sub_resource type="AtlasTexture" id="Place0"]
+atlas = ExtResource("3_place")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place1"]
+atlas = ExtResource("3_place")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place2"]
+atlas = ExtResource("3_place")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place3"]
+atlas = ExtResource("3_place")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place4"]
+atlas = ExtResource("3_place")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place5"]
+atlas = ExtResource("3_place")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place6"]
+atlas = ExtResource("3_place")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place7"]
+atlas = ExtResource("3_place")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place8"]
+atlas = ExtResource("3_place")
+region = Rect2(768, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Place9"]
+atlas = ExtResource("3_place")
+region = Rect2(1024, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk0"]
+atlas = ExtResource("4_walk")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk1"]
+atlas = ExtResource("4_walk")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk2"]
+atlas = ExtResource("4_walk")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk3"]
+atlas = ExtResource("4_walk")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk4"]
+atlas = ExtResource("4_walk")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk5"]
+atlas = ExtResource("4_walk")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk6"]
+atlas = ExtResource("4_walk")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Walk7"]
+atlas = ExtResource("4_walk")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write0"]
+atlas = ExtResource("2_write")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write1"]
+atlas = ExtResource("2_write")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write2"]
+atlas = ExtResource("2_write")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write3"]
+atlas = ExtResource("2_write")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write4"]
+atlas = ExtResource("2_write")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write5"]
+atlas = ExtResource("2_write")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write6"]
+atlas = ExtResource("2_write")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write7"]
+atlas = ExtResource("2_write")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write8"]
+atlas = ExtResource("2_write")
+region = Rect2(768, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="Write9"]
+atlas = ExtResource("2_write")
+region = Rect2(1024, 256, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_police"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Place0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place7")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place8")
+}, {
+"duration": 1.0,
+"texture": SubResource("Place9")
+}],
+"loop": 0,
+"name": &"place_ticket",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Walk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Walk7")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Write0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write7")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write8")
+}, {
+"duration": 1.0,
+"texture": SubResource("Write9")
+}],
+"loop": 0,
+"name": &"write_ticket",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape_police"]
+radius = 22.0
+height = 78.0
+
+[node name="PoliceAlien" type="CharacterBody2D" unique_id=433139229]
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1896491842]
+position = Vector2(0, -64)
+scale = Vector2(0.64, 0.64)
+sprite_frames = SubResource("SpriteFrames_police")
+animation = &"write_ticket"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=666638072]
+position = Vector2(0, -39)
+shape = SubResource("CapsuleShape_police")

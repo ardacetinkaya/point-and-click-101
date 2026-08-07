@@ -241,6 +241,8 @@ public partial class GameMenu : CanvasLayer
 			HasLookedAtMap = GameState.Instance.HasLookedAtMap,
 			HasTakenMap = GameState.Instance.HasTakenMap,
 			HasShownCrashSiteIntro = GameState.Instance.HasShownCrashSiteIntro,
+			HasReceivedParkingTicket = GameState.Instance.HasReceivedParkingTicket,
+			HasTakenParkingTicket = GameState.Instance.HasTakenParkingTicket,
 			StationHasPower = GameState.Instance.StationHasPower,
 			InventoryItems = [.. InventoryManager.Instance.Items]
 		};
@@ -287,6 +289,8 @@ public partial class GameMenu : CanvasLayer
 			saveData.HasLookedAtMap,
 			saveData.HasTakenMap,
 			saveData.HasShownCrashSiteIntro,
+			saveData.HasReceivedParkingTicket,
+			saveData.HasTakenParkingTicket,
 			saveData.StationHasPower
 		);
 		InventoryManager.Instance.RestoreItems(saveData.InventoryItems);

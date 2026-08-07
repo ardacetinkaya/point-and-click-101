@@ -9,6 +9,8 @@ public partial class GameState : Node
 	public bool HasLookedAtMap { get; set; } = false;
 	public bool HasTakenMap { get; set; } = false;
 	public bool HasShownCrashSiteIntro { get; set; } = false;
+	public bool HasReceivedParkingTicket { get; set; } = false;
+	public bool HasTakenParkingTicket { get; set; } = false;
 
 	[Signal]
 	public delegate void StationPowerChangedEventHandler(
@@ -31,6 +33,8 @@ public partial class GameState : Node
 		HasLookedAtMap = false;
 		HasTakenMap = false;
 		HasShownCrashSiteIntro = false;
+		HasReceivedParkingTicket = false;
+		HasTakenParkingTicket = false;
 		SetStationPower(false);
 	}
 
@@ -49,12 +53,21 @@ public partial class GameState : Node
 		return true;
 	}
 
-	public void Restore(bool hasLookedAtMap, bool hasTakenMap, bool hasShownCrashSiteIntro, bool stationHasPower)
+	public void Restore(
+		bool hasLookedAtMap,
+		bool hasTakenMap,
+		bool hasShownCrashSiteIntro,
+		bool hasReceivedParkingTicket,
+		bool hasTakenParkingTicket,
+		bool stationHasPower
+	)
 	{
 		NextSpawnPoint = string.Empty;
 		HasLookedAtMap = hasLookedAtMap;
 		HasTakenMap = hasTakenMap;
 		HasShownCrashSiteIntro = hasShownCrashSiteIntro;
+		HasReceivedParkingTicket = hasReceivedParkingTicket;
+		HasTakenParkingTicket = hasTakenParkingTicket;
 		SetStationPower(stationHasPower);
 	}
 	

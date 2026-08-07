@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://3hd7hd862gej" path="res://Scenes/CrashSite/CrashSiteScene.cs" id="1_sqg4h"]
 [ext_resource type="Texture2D" uid="uid://cqwnn3gxpko3y" path="res://Arts/Props/SpaceCraft.png" id="2_dpemo"]
 [ext_resource type="Texture2D" uid="uid://bkuwhpbvo2onw" path="res://Arts/Backgrounds/CrashSite.png" id="2_sqg4h"]
-[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player.tscn" id="3_nxp1v"]
+[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player/Player.tscn" id="3_nxp1v"]
 [ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="4_nxp1v"]
 [ext_resource type="Shader" uid="uid://cm3mnb1hirfoc" path="res://Scenes/CrashSite/CrashSiteScene.gdshader" id="4_utx67"]
 [ext_resource type="Texture2D" uid="uid://msn5e15ciwqu" path="res://Arts/Props/Outpost17Sign.png" id="4_ymm5b"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rxd78mc7acs5"
-path="res://.godot/imported/Player#1_Walk.png-86a76149d658d9dd21b641fb3091719d.ctex"
+uid="uid://cv371tesfbsdq"
+path="res://.godot/imported/Alien#1_Idle.png-3779fa7a829df4be8d1c327987895982.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/Players/Player#1_Walk.png"
-dest_files=["res://.godot/imported/Player#1_Walk.png-86a76149d658d9dd21b641fb3091719d.ctex"]
+source_file="res://Arts/Players/Alien#1/Alien#1_Idle.png"
+dest_files=["res://.godot/imported/Alien#1_Idle.png-3779fa7a829df4be8d1c327987895982.ctex"]
 
 [params]
 

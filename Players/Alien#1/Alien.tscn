@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://cb8fgyy22cvj8"]
+
+[ext_resource type="Script" uid="uid://cupgcbdalw6ye" path="res://Players/Alien#1/Alien.cs" id="1_1tfy6"]
+[ext_resource type="Texture2D" uid="uid://cv371tesfbsdq" path="res://Arts/Players/Alien#1/Alien#1_Idle.png" id="1_7dgv2"]
+[ext_resource type="Script" uid="uid://btcouwpkugdi8" path="res://Scenes/Kraker/AlienHotspot.cs" id="3_hotspot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tfy6"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbegw"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0lor"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uf0w"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4ea3"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t561j"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rneaw"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3e0s"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqfg5"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(768, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8so2"]
+atlas = ExtResource("1_7dgv2")
+region = Rect2(1024, 256, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxyln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tfy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbegw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0lor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2uf0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4ea3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t561j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rneaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3e0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqfg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8so2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7c6h1"]
+radius = 26.0
+height = 76.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hotspot"]
+radius = 44.0
+height = 132.0
+
+[node name="Alien" type="CharacterBody2D" unique_id=2123628647]
+script = ExtResource("1_1tfy6")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=700878314]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visuals" unique_id=1803443979]
+position = Vector2(0, -55)
+scale = Vector2(0.5878906, 0.58984375)
+sprite_frames = SubResource("SpriteFrames_xxyln")
+animation = &"idle"
+frame_progress = 0.08323947
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1753636230]
+position = Vector2(0, -24)
+shape = SubResource("CapsuleShape2D_7c6h1")
+
+[node name="Hotspot" type="Area2D" parent="." unique_id=197634396]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("3_hotspot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hotspot" unique_id=1049739045]
+position = Vector2(0, -42)
+shape = SubResource("CapsuleShape2D_hotspot")
+
+[node name="Marker2D" type="Marker2D" parent="Hotspot" unique_id=561537728]
+position = Vector2(-78, 4)
+
+[node name="ThoughtBubble" type="Control" parent="." unique_id=717010035]
+z_index = 100
+layout_mode = 3
+anchors_preset = 0
+offset_left = -170.0
+offset_top = -220.0
+offset_right = 170.0
+offset_bottom = -105.0
+mouse_filter = 2
+
+[node name="ThoughtLabel" type="Label" parent="ThoughtBubble" unique_id=1032373843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = -14.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ThoughtTimer" type="Timer" parent="." unique_id=1853305579]
+wait_time = 3.0
+one_shot = true

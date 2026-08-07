@@ -99,7 +99,8 @@ The project currently includes these main scenes:
    ![Crash Site](Assets/Screen%234.png)
 - __Kraker__
 
-   ![Crash Site](Assets/Screen%235.png)
+   ![Kraker](Assets/Screen%235.png)
+   ![Kraker](Assets/Screen%235.1.png)
 
 ## Controls
 

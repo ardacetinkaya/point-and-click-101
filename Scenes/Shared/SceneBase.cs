@@ -16,6 +16,7 @@ public abstract partial class SceneBase : Node2D
 	
 	private Hotspot? _pendingHotspot;
 	private HotspotAction _pendingAction;
+	private bool _interactionEnabled = true;
 	
 	public override void _Ready()
 	{
@@ -35,6 +36,11 @@ public abstract partial class SceneBase : Node2D
 	
 	public override void _UnhandledInput(InputEvent @event)
 	{
+		if (!_interactionEnabled)
+		{
+			return;
+		}
+
 		if (@event is not InputEventMouseButton mouseEvent)
 		{
 			return;
@@ -109,13 +115,32 @@ public abstract partial class SceneBase : Node2D
 	}
 
 	private void OnActionChosen(Hotspot hotspot, int actionValue)
-	{    
+	{
+		if (!_interactionEnabled)
+		{
+			return;
+		}
+
 		GD.Print($"SceneBase received action: {(HotspotAction)actionValue}");
 		
 		_pendingHotspot = hotspot;
 		_pendingAction = (HotspotAction)actionValue;
 
 		Player.MoveTo(hotspot.InteractionPoint.GlobalPosition);
+	}
+
+	protected void SetInteractionEnabled(bool enabled)
+	{
+		_interactionEnabled = enabled;
+
+		if (enabled)
+		{
+			return;
+		}
+
+		_pendingHotspot = null;
+		ActionMenu.HideMenu();
+		Player.Stop();
 	}
 	
 	private void PlacePlayer()

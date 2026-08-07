@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dguv1jhkwqabr" path="res://Scenes/StationInterior/StationInteriorScene.cs" id="1_r7ewt"]
 [ext_resource type="Texture2D" uid="uid://blvh2gkwt6e2y" path="res://Arts/Backgrounds/StationInterior.png" id="2_r7ewt"]
-[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player.tscn" id="3_34vv0"]
+[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player/Player.tscn" id="3_34vv0"]
 [ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="4_r7vhr"]
 [ext_resource type="PackedScene" uid="uid://cvoq8h4wot78f" path="res://Scenes/Shared/InventoryPanel.tscn" id="5_g4c8b"]
 [ext_resource type="Script" uid="uid://iaikg5nnhs3c" path="res://Scenes/StationInterior/Props/Map/Map.cs" id="6_bnfey"]

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://4qxyninfnbr5"]
+
+[ext_resource type="Script" uid="uid://bw15p06mvw4qg" path="res://Scenes/Shared/DialogueChoicePanel.cs" id="1_g7tvl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.035, 0.045, 0.065, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.62, 0.78, 0.72, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="DialogueChoicePanel" type="PanelContainer" unique_id=1866408289]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -220.0
+offset_right = 540.0
+offset_bottom = -24.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+script = ExtResource("1_g7tvl")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=202847087]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=402917890]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Prompt" type="Label" parent="MarginContainer/Content" unique_id=1718281758]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.92, 0.84, 1)
+theme_override_font_sizes/font_size = 17
+text = "What should I say?"
+
+[node name="ChoiceList" type="VBoxContainer" parent="MarginContainer/Content" unique_id=1593605353]
+layout_mode = 2
+theme_override_constants/separation = 3

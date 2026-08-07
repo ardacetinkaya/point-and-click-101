@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bagpyhwbsqbb7"]
 
-[ext_resource type="Script" uid="uid://dcwqvvnmnsr7k" path="res://Players/Player.cs" id="1_h53b3"]
-[ext_resource type="Texture2D" uid="uid://v0djjfvojcba" path="res://Arts/Players/Player#1_Idle.png" id="2_1mk1h"]
-[ext_resource type="Texture2D" uid="uid://rxd78mc7acs5" path="res://Arts/Players/Player#1_Walk.png" id="4_1mk1h"]
+[ext_resource type="Script" uid="uid://dcwqvvnmnsr7k" path="res://Players/Player/Player.cs" id="1_o5wao"]
+[ext_resource type="Texture2D" uid="uid://v0djjfvojcba" path="res://Arts/Players/Player#1/Player#1_Idle.png" id="2_1mk1h"]
+[ext_resource type="Texture2D" uid="uid://rxd78mc7acs5" path="res://Arts/Players/Player#1/Player#1_Walk.png" id="4_1mk1h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ncu4g"]
 atlas = ExtResource("2_1mk1h")
@@ -151,7 +151,7 @@ corner_detail = 10
 
 [node name="Player" type="CharacterBody2D" unique_id=2083515506]
 motion_mode = 1
-script = ExtResource("1_h53b3")
+script = ExtResource("1_o5wao")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=1466805283]
 
@@ -160,6 +160,8 @@ position = Vector2(-3, -89)
 scale = Vector2(0.84992194, 0.96570325)
 sprite_frames = SubResource("SpriteFrames_1p0nb")
 animation = &"idle"
+frame = 5
+frame_progress = 0.3548568
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1398021095]

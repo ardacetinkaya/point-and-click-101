@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://cqlega1tsuw6e" path="res://Scenes/PowerOffline/Hotspots/Cable/CableHotspot.cs" id="5_bwk6v"]
 [ext_resource type="Script" uid="uid://dmb7jpwlyd5vx" path="res://Scenes/PowerOffline/Hotspots/Entrance/EntranceHotspot.cs" id="6_xue8y"]
 [ext_resource type="Script" uid="uid://dsxfr7wk5pq2u" path="res://Scenes/PowerOffline/Hotspots/Exit/ExitHotspot.cs" id="7_wk0gl"]
-[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player.tscn" id="8_chfm4"]
+[ext_resource type="PackedScene" uid="uid://bagpyhwbsqbb7" path="res://Players/Player/Player.tscn" id="8_chfm4"]
 [ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="9_sxmlv"]
 [ext_resource type="PackedScene" uid="uid://cvoq8h4wot78f" path="res://Scenes/Shared/InventoryPanel.tscn" id="10_8oeuy"]
 [ext_resource type="Script" uid="uid://c3frmidbrxxrs" path="res://Scenes/Shared/SceneTransitionArea.cs" id="11_nsyhj"]

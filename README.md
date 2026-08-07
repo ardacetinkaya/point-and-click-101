@@ -47,9 +47,13 @@ This is not intended to be a complete or production-ready game. Its main purpose
 
 - **Signals** — Signals(GODOT engine) allow the player, hotspots, menus, scene objects, and global systems to communicate without tightly coupling their implementations.
 
-- **Thought bubbles** — Action results and short dialogue lines appear above the player instead of being printed only to the debug console.
+- **Thought bubbles** — Action results and short dialogue lines appear above the player and other characters instead of being printed only to the debug console.
 
 - **Thought sequences** — Multiple lines can be displayed in order with configurable delays, allowing simple introductions and character reactions.
+
+- **Scene-specific dialogue** — Choosing the Talk action for a character can open text-based dialogue options at the bottom-left of the screen. The selected option is spoken by the player and followed by the other character's response.
+
+- **Character conversations** — The player and Alien#1 use separate thought text to display a simple timed conversation. Dialogue options and answers are kept inside the related scene so their text can be revised without changing the shared interaction systems.
 
 - **Viewport-aware UI positioning** — The action menu and thought bubble are kept inside the visible screen area when they appear near an edge.
 

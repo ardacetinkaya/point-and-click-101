@@ -58,6 +58,7 @@ public partial class KrakerScene : SceneBase
             return;
         }
 
+		_alien.FaceTowards(Player.GlobalPosition);
         SetInteractionEnabled(false);
         ShowDialogueChoices();
     }

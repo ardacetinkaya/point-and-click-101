@@ -100,7 +100,11 @@ The project currently includes these main scenes:
 - __Kraker__
 
    ![Kraker](Assets/Screen%235.png)
-   ![Kraker](Assets/Screen%235.1.png)
+   ![Kraker](Assets/Screen%235.2.png)
+
+- __Game Common__
+
+  ![Kraker](Assets/Menu.png)
 
 ## Controls
 

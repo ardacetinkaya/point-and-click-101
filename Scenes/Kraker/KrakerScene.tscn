@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cb8fgyy22cvj8" path="res://Players/Alien#1/Alien.tscn" id="4_tdbi4"]
 [ext_resource type="PackedScene" uid="uid://d2w4duibbfeda" path="res://Scenes/Shared/ActionMenu.tscn" id="5_tdbi4"]
 [ext_resource type="Script" uid="uid://c3frmidbrxxrs" path="res://Scenes/Shared/SceneTransitionArea.cs" id="6_3y0ex"]
-[ext_resource type="PackedScene" path="res://Scenes/Shared/DialogueChoicePanel.tscn" id="7_dialogue"]
+[ext_resource type="PackedScene" uid="uid://4qxyninfnbr5" path="res://Scenes/Shared/DialogueChoicePanel.tscn" id="7_dialogue"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yipui"]
 vertices = PackedVector2Array(121.34375, 273.07813, 53.0625, 242.86719, 1145.75, 240.02344, 787.64844, 267.9297, 889.85156, 672.84375, 184.15625, 652.1406, 305.1875, 590.0078, 753.40625, 438, 956.78906, 438, 304.79688, 577.3672, 152.74219, 510.89844, 240.57031, 471.6797, 550.47656, 371.7422, 56.820313, 373.96875, 11.6875, 378.0703, 10.28125, 328.60156, 111.296875, 324.6875, 114.65625, 377.1875, 1143, 353.8828, 1097.7188, 352.90625, 977.03125, 285.2422, 1143, 391.8203, 1134.0625, 393.64844, 1086.5313, 415.04688, 1018.47656, 428.1875, 1055.1016, 432.39063, 241.39063, 459.6875, 541.4297, 331.0078, 138.67969, 395.7578, 631.21875, 293.3203)
@@ -51,7 +51,6 @@ anchors_preset = 15
 [node name="ActionMenu" parent="UI" unique_id=1049884715 instance=ExtResource("5_tdbi4")]
 
 [node name="DialogueChoicePanel" parent="UI" unique_id=2146573688 instance=ExtResource("7_dialogue")]
-anchors_preset = 2
 
 [node name="Transitions" type="Node2D" parent="." unique_id=165916679]
 

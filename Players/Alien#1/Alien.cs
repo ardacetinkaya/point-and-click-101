@@ -45,6 +45,12 @@ public partial class Alien : CharacterBody2D
         Callable.From(KeepThoughtBubbleInsideViewport).CallDeferred();
     }
 
+	public void FaceTowards(Vector2 worldPosition)
+	{
+		// The source artwork faces left, so flip it only when the speaker is to the right.
+		_sprite.FlipH = worldPosition.X > GlobalPosition.X;
+	}
+
     private void KeepThoughtBubbleInsideViewport()
     {
         if (!_thoughtBubble.Visible)

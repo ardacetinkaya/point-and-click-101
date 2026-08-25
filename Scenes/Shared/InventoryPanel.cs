@@ -8,6 +8,9 @@ public partial class InventoryPanel : Control
     [Export]
     public Texture2D MapIcon { get; set; } = null!;
 
+	[Export]
+	public Texture2D ParkingTicketIcon { get; set; } = null!;
+
     private GridContainer _itemGrid = null!;
 
     public override void _Ready()
@@ -102,6 +105,7 @@ public partial class InventoryPanel : Control
         return itemId switch
         {
             InventoryItemIds.Map => MapIcon,
+			InventoryItemIds.ParkingTicket => ParkingTicketIcon,
             _ => null!
         };
     }
@@ -111,6 +115,7 @@ public partial class InventoryPanel : Control
         return itemId switch
         {
             InventoryItemIds.Map => "Map",
+			InventoryItemIds.ParkingTicket => "Parking Ticket",
             _ => itemId
         };
     }

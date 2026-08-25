@@ -9,6 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://msn5e15ciwqu" path="res://Arts/Props/Outpost17Sign.png" id="4_ymm5b"]
 [ext_resource type="PackedScene" uid="uid://cvoq8h4wot78f" path="res://Scenes/Shared/InventoryPanel.tscn" id="5_sqg4h"]
 [ext_resource type="Script" uid="uid://c3frmidbrxxrs" path="res://Scenes/Shared/SceneTransitionArea.cs" id="7_u6nck"]
+[ext_resource type="PackedScene" uid="uid://bciqw5xs8auww" path="res://Players/PoliceAlien#1/PoliceAlien.tscn" id="8_police"]
+[ext_resource type="Texture2D" uid="uid://dngei4n4pnu15" path="res://Arts/Props/ParkingTicket.png" id="9_ticket"]
+[ext_resource type="Script" uid="uid://y30741xp2viq" path="res://Scenes/CrashSite/Props/ParkingTicket/ParkingTicket.cs" id="10_ticket_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ticket"]
+size = Vector2(48, 42)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ymm5b"]
 shader = ExtResource("4_utx67")
@@ -82,6 +88,21 @@ position = Vector2(0, -6.1035156e-05)
 scale = Vector2(0.385, 0.499)
 texture = ExtResource("2_dpemo")
 
+[node name="ParkingTicket" type="Area2D" parent="SpaceCraft" unique_id=1567387290]
+position = Vector2(195, 62)
+rotation = -0.0872665
+script = ExtResource("10_ticket_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpaceCraft/ParkingTicket" unique_id=1201303497]
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("9_ticket")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpaceCraft/ParkingTicket" unique_id=369451960]
+shape = SubResource("RectangleShape2D_ticket")
+
+[node name="Marker2D" type="Marker2D" parent="SpaceCraft/ParkingTicket" unique_id=523917870]
+position = Vector2(0, 70)
+
 [node name="Effects" type="Node2D" parent="SpaceCraft" unique_id=2077145146]
 
 [node name="SmokeOrigin" type="Marker2D" parent="SpaceCraft/Effects" unique_id=1310728453]
@@ -144,3 +165,16 @@ position = Vector2(1115, 333)
 
 [node name="FromNovaMap" type="Marker2D" parent="SpawnPoints" unique_id=2140701581]
 position = Vector2(280, 635)
+
+[node name="PoliceTicketSequence" type="Node2D" parent="." unique_id=242773507]
+position = Vector2(78, -30)
+
+[node name="StartPosition" type="Marker2D" parent="PoliceTicketSequence" unique_id=598182312]
+position = Vector2(330, 445)
+
+[node name="ExitPosition" type="Marker2D" parent="PoliceTicketSequence" unique_id=611986242]
+position = Vector2(-120, 465)
+
+[node name="PoliceAlien" parent="PoliceTicketSequence" unique_id=1184103384 instance=ExtResource("8_police")]
+z_index = 1000
+position = Vector2(334, 447)

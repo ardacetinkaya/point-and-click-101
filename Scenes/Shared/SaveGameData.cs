@@ -10,6 +10,8 @@ public sealed class SaveGameData
 	public bool HasLookedAtMap { get; set; }
 	public bool HasTakenMap { get; set; }
 	public bool HasShownCrashSiteIntro { get; set; }
+	public bool HasReceivedParkingTicket { get; set; }
+	public bool HasTakenParkingTicket { get; set; }
 	public bool StationHasPower { get; set; }
 	public List<string> InventoryItems { get; set; } = [];
 }

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cupgcbdalw6ye" path="res://Players/Alien#1/Alien.cs" id="1_1tfy6"]
 [ext_resource type="Texture2D" uid="uid://cv371tesfbsdq" path="res://Arts/Players/Alien#1/Alien#1_Idle.png" id="1_7dgv2"]
-[ext_resource type="Script" uid="uid://btcouwpkugdi8" path="res://Scenes/Kraker/AlienHotspot.cs" id="3_hotspot"]
+[ext_resource type="Script" uid="uid://btcouwpkugdi8" path="res://Scenes/Kraker/Hotspots/AlienHotspot.cs" id="3_hotspot"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tfy6"]
 atlas = ExtResource("1_7dgv2")

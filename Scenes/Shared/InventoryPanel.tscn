@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://drnpsetlcw715" path="res://Scenes/Shared/InventoryPanel.cs" id="1_76two"]
 [ext_resource type="Texture2D" uid="uid://bm4uelvsltsaf" path="res://Arts/Props/Map.png" id="2_vqxya"]
 [ext_resource type="Texture2D" uid="uid://7fn6tux6wk8n" path="res://Arts/Shared/ActionMenu.png" id="3_f15cu"]
+[ext_resource type="Texture2D" path="res://Arts/Props/ParkingTicket.png" id="4_ticket"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f15cu"]
 texture = ExtResource("3_f15cu")
@@ -16,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_76two")
 MapIcon = ExtResource("2_vqxya")
+ParkingTicketIcon = ExtResource("4_ticket")
 
 [node name="Background" type="ColorRect" parent="." unique_id=482075702]
 layout_mode = 1
